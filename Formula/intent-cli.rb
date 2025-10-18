@@ -5,21 +5,21 @@
 class IntentCli < Formula
   desc "IntentRegistry CLI — publish and install AI Intents"
   homepage "https://intentregistry.com"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.5/intent-darwin-amd64.tar.gz"
-      sha256 "c558e8f5bf0a416e9c4f0ff96fe47f771f213cae330e67e37e697716e5c34757"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.6/intent-darwin-amd64.tar.gz"
+      sha256 "d3f8faa4b70d05b1f85cda76fbcb7347aedec8e3294fffa2066651b71a2b6c30"
 
       def install
         bin.install "intent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.5/intent-darwin-arm64.tar.gz"
-      sha256 "960de085845f75689e7e723007e2bf629d2b67a658098e169b45aabaa87be68f"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.6/intent-darwin-arm64.tar.gz"
+      sha256 "e73873959230449d3c9f687497b716ad2d55a2b06fbfb6ecc59fd4cfb219a2e1"
 
       def install
         bin.install "intent"
@@ -29,15 +29,15 @@ class IntentCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.5/intent-linux-amd64.tar.gz"
-      sha256 "f34c56623daa56d35bfbe24be6a3ed9dec62e7118fc2b2e3f8f281807718daf4"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.6/intent-linux-amd64.tar.gz"
+      sha256 "9dbd9feb8186b988a57439f84be35abbb10a90aba84f67141e2ba7453609c853"
       def install
         bin.install "intent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.5/intent-linux-arm64.tar.gz"
-      sha256 "2c323ee4e4d37a270a3ee2a3a6e358ada7b3cb06dd641565a42595153c4a9b6d"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.2.6/intent-linux-arm64.tar.gz"
+      sha256 "966dee3f0286bd3060f25435ccc2e6ac2fa33a0904a6e8f8b8b415a78b2d7410"
       def install
         bin.install "intent"
       end
