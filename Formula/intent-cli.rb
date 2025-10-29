@@ -5,13 +5,13 @@
 class IntentCli < Formula
   desc "IntentRegistry CLI — publish and install AI Intents"
   homepage "https://intentregistry.com"
-  version "0.3.10"
+  version "0.3.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.10/intent-darwin-amd64.tar.gz"
-      sha256 "9a5f1c409a181b9e3ff6ecf59838d3ae83c1ab850bc5a5f1ce2d48552427726b"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.11/intent-darwin-amd64.tar.gz"
+      sha256 "4d8a3b267fb4874de2305b227d962f9e6dbef6a05aff5b32fe37c28105d8e37f"
 
       def install
         bin.install "intent"
@@ -19,8 +19,8 @@ class IntentCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.10/intent-darwin-arm64.tar.gz"
-      sha256 "4299f7a588351d33f5f7b8d77697ae095267edc39786aaec2d787fbc3a414c89"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.11/intent-darwin-arm64.tar.gz"
+      sha256 "1e83439a761aa4b25c8eb7d98cd67d62e9c5206c5edde2faec693f434e9f2037"
 
       def install
         bin.install "intent"
@@ -31,16 +31,16 @@ class IntentCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.10/intent-linux-amd64.tar.gz"
-      sha256 "6dafa58f9d60e9addf1baa0c0607f23e92989a663e7dd50465e5830725104035"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.11/intent-linux-amd64.tar.gz"
+      sha256 "45843a0bbe1bdf13517c0dfa0a21321a3d0e6647d80c7a542a03c3483af0e640"
       def install
         bin.install "intent"
         generate_completions_from_executable(bin/"intent", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.10/intent-linux-arm64.tar.gz"
-      sha256 "9b30831cc63fd06b31b71e25c0f663bddac96d94e5b19c3b79815ef000d2ca79"
+      url "https://github.com/intentregistry/intent-cli/releases/download/v0.3.11/intent-linux-arm64.tar.gz"
+      sha256 "b96836a7e6b84e3cfa5da05e9494293fc3f155b9cd51ae4103b269d7cb14eba5"
       def install
         bin.install "intent"
         generate_completions_from_executable(bin/"intent", "completion")
